@@ -18,7 +18,15 @@ export default function App() {
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="onboarding">
-            <Stack.Screen name="onboarding" component={Onboarding} />
+            <Stack.Screen
+              name="onboarding"
+              options={{
+                headerStyle: {
+                  opacity: 0,
+                },
+              }}
+              component={Onboarding}
+            />
             <Stack.Screen name="Counter" component={Counter} />
           </Stack.Navigator>
         </NavigationContainer>
